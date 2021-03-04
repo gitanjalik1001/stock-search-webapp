@@ -1,0 +1,51 @@
+.btn{
+  color: white;
+  background-color: inherit;
+  margin:auto;
+}
+.btn:hover{
+  border: 2px solid white;
+  border-color: white;
+  border-radius: 10px;
+}
+
+.btn:active{
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.navbar{
+  background-color: #9c4be7;
+}
+
+.navbar-brand{
+  color: white;
+  text-align: justify;
+}
+
+.navbar .icon {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .navbar a:not(.navbar-brand) {display: none;}
+  .navbar a.icon {
+    float: right;
+    color: white;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

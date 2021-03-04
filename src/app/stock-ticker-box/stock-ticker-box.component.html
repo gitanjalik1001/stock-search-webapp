@@ -1,0 +1,42 @@
+<!--<input type ="search" id="searchticker" placeholder="Enter stock name">-->
+<!-- <form class="form-inline d-flex justify-content-center md-form form-sm">
+  <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+    aria-label="Search">
+  <!--<i class="fas fa-search" aria-hidden="true"></i>-->
+<!--</form> -->
+<div *ngIf="valid">
+  <div class ="emptySearch">No results found. Please enter Ticker</div>
+</div>
+<h1>STOCK SEARCH</h1>
+<!--<div class="input-group col-md-4">-->
+<div class="form">
+<form class="example-form">
+  <div class="row no-gutters justify-content-md-center">
+ <div class="col-md-auto">
+  <!--<mat-form-field class="example-full-width">-->
+    <input class="form-control rounded-pill pr-5 mr-1 bg-transparent" type="text" value="search"
+           placeholder="Enter stock name"
+           aria-label="Stock Name"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto" #stock>
+  </div>
+  <!--<span class="input-group-append"-->
+  <div class="col-md-auto">
+  <button class="btn btn-outline-secondary border-0 bg-transparent ml-n5" type="button" (click)="getDescription(stock.value)">
+                    <i class="fa fa-search"></i>
+  </button>
+  <!--</span>-->
+</div>
+</div>
+
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]="option.ticker">
+        {{option.ticker}}
+      </mat-option>
+    </mat-autocomplete>
+  <!--</mat-form-field>-->
+
+</form>
+</div>
+<!--</div>-->
